@@ -1,0 +1,46 @@
+<div class="modal fade review-modal" id="reviewModal">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Оставить отзыв:</h5>
+        <button type="button" class="modal__close" data-close="true" aria-label="Close">
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path d="M11.41 9l7.29-7.29A1 1 0 0017.29.3L10 7.59 2.71.29A1 1 0 001.3 1.7L8.59 9l-7.3 7.29A1.001 1.001 0 102.7 17.7l7.3-7.29 7.29 7.29a1 1 0 001.41-1.41L11.41 9z" fill="#fff"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="make-review">
+          <span>Оцените свой опыт использования:</span>
+          {{> starRating rating=0 class='js-set-stars' }}
+        </div>
+        <form class="form" id="reviewForm">
+          <div class="form__label">
+            Как вас зовут
+          </div>
+          <div class="form__row form__row--double">
+            {{> floatInput type="tel" id="name" label="Ваше имя"}}
+            {{> floatInput type="email" id="reviewEmail" label="Электронная почта"}}
+          </div>
+          <div class="form__row">
+            {{> floatTextarea id="message" label="Ваш отзыв*"}}
+          </div>
+          <div class="form__row">
+            <label class="check">
+              <input
+                type="checkbox"
+                class="check__input"
+                id="agreement"
+                name="agreement"
+                value="yes"
+              />
+              <span class="check__box"></span>
+              Я прочитал и согласен с правилами «Соглашение на обработку персональных данных»
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" form="reviewForm" class="btn btn--outline" data-bs-dismiss="modal">Оставить отзыв</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.subheader {
+  margin-bottom: 100px;
+}
+
+.subheader__title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: #262626;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    color: #5100D3;
+  }
+}
+
+.subheader__lead {
+  margin: 15px 0 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .subheader {
+    margin-bottom: 30px !important;
+  }
+}

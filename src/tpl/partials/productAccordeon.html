@@ -1,0 +1,125 @@
+<div class="accordeon">
+  <div class="accordeon__item">
+    <h2 class="accordeon__header">
+      <button class="accordeon__trigger">
+        описание
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"><path d="M.667 10h20.416l-8.75-8.75L13.44 0l10.833 10.833L13.44 21.667l-1.107-1.25 8.75-8.75H.667V10z" fill="#262626"/></svg>
+      </button> 
+    </h2>
+    <div class="accordeon__panel">
+      <p>
+        Свитшот унисекс с цитатой известного художника Винсента ван Гога «Искусство - это природа плюс человек» из новой коллекции ГМИИ им. А.С.Пушкина. Свитшот оверсайз. Свитшот дизайнерский. Лимитированная коллекция.
+      </p>
+    </div>
+  </div>
+  <div class="accordeon__item">
+    <h2 class="accordeon__header">
+      <button class="accordeon__trigger">
+        Характеристики
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"><path d="M.667 10h20.416l-8.75-8.75L13.44 0l10.833 10.833L13.44 21.667l-1.107-1.25 8.75-8.75H.667V10z" fill="#262626"/></svg>
+      </button>
+    </h2>
+    <div class="accordeon__panel">
+      <div class="product-details">
+        <div class="product-detail">
+          <dl>
+            <dt>
+              <span>Сезон:</span>
+            </dt>
+            <dd>На любой сезон</dd>
+          </dl>
+          <dl>
+            <dt>
+              <span>Материал:</span>
+            </dt>
+            <dd>Хлопок, Полиэстер</dd>
+          </dl>
+          <dl>
+            <dt>
+              <span>Состав материала:</span>
+            </dt>
+            <dd>Несложный</dd>
+          </dl>
+          <dl>
+            <dt>
+              <span>Стиль:</span>
+            </dt>
+            <dd>Повседневный, Спортивный</dd>
+          </dl>
+        </div>
+        <div class="product-detail">
+          <dl>
+            <dt>
+              <span>Пол:</span>
+            </dt>
+            <dd>Женский, Мужской</dd>
+          </dl>
+          <dl>
+            <dt>
+              <span>Бренд:</span>
+            </dt>
+            <dd>ZEYTZ. Коллекция «Пушкинский музей»</dd>
+          </dl>
+          <dl>
+            <dt>
+              <span>Вид принта:</span>
+            </dt>
+            <dd>Надписи</dd>
+          </dl>
+          <dl>
+            <dt>
+              <span>Доставка:</span>
+            </dt>
+            <dd>по РФ</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordeon__item">
+    <h2 class="accordeon__header">
+      <button class="accordeon__trigger">
+        отзывы
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"><path d="M.667 10h20.416l-8.75-8.75L13.44 0l10.833 10.833L13.44 21.667l-1.107-1.25 8.75-8.75H.667V10z" fill="#262626"/></svg>
+      </button>
+    </h2>
+    <div class="accordeon__panel">
+      <div class="product-reviews">
+        {{> starRating rating=4.65 class='js-show-stars' }}
+        Рейтинг 4,65 на базе 125 отзывов
+        <a href="#" class="product-reviews__link">
+          От купивших товар
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11"><path d="M.333 5h10.209L6.167.625 6.72 0l5.417 5.417-5.417 5.416-.553-.625 4.375-4.375H.333V5z" fill="#262626"/></svg>
+        </a>
+        <div class="product-reviews__reviews">
+          <div class="product-reviews__review">
+            <div class="product-reviews__review-header">
+              <h3>
+                Иванова Марина
+                <span>Проверенный покупатель</span>
+              </h3>
+              {{> starRating rating=5 class='js-show-stars' }}
+            </div>
+            <div class="product-reviews__review-text">
+              Замечательный товар, очень высокое качество упаковки и собственно самого товара, отлично переданы мельчайщие нюансы графики известного художника мариниста, буду рекомендовать покупать ваши картины по номерам своим друзьям и родственникам.
+            </div>
+          </div>
+          <div class="product-reviews__review product-reviews__review--answer">
+            <div class="product-reviews__review-header">
+              <h3>
+                Сидоров иван
+                <span>Администратор магазина</span>
+              </h3>
+            </div>
+            <div class="product-reviews__review-text">
+              Спасибо за то, что вы так высоко оценили наш товар
+            </div>
+          </div>
+        </div>
+        <div class="product-reviews__action">
+          <button class="btn btn--outline" data-bs-toggle="modal" data-bs-target="#reviewModal">Добавить отзыв</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

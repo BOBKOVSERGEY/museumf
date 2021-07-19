@@ -1,0 +1,238 @@
+.cabinet {
+  padding-bottom: 200px;
+}
+
+.cabinet__nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+}
+
+.cabinet__link {
+  padding: 24px 15px;
+
+  &--active {
+    color: #5100D3;
+    background-color: #F2F2F2;
+  }
+}
+
+.cabinet__actions {
+  margin-top: 50px !important;
+  justify-content: flex-end;
+
+  .btn + .btn {
+    margin-left:  20px;
+  }
+}
+
+.cabinet__addresses {
+  margin-top: 70px;
+
+  p {
+    margin: 0;
+  }
+
+  p:first-of-type {
+    margin-top: 50px;
+    font-weight: 500;
+  }
+}
+
+.cabinet__addresses-action {
+  margin-top: 30px;
+  display: flex;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  th {
+    padding: 30px 0;
+    font-weight: 400;
+  }
+
+  td {
+    padding: 30px 0;
+  }
+}
+
+.orders-table__actions {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    height: 16px;
+  }
+
+  &:hover .orders-tabel__actions-dropdown {
+    opacity: 1;
+    pointer-events: all;
+    right: 100%;
+  }
+}
+
+.orders-tabel__actions-dropdown {
+  position: absolute;
+  right: 160%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease-in-out;
+
+  span {
+    padding: 8px 20px;
+
+    &:hover {
+      background-color: #F2F2F2;
+      color: #5100D3;
+    }
+  }
+}
+
+.cabinet__addresses {
+  .form {
+    .select {
+      width: 100%;
+    }
+    .select, .float-input {
+      display: none;
+    }
+
+    &--edit {
+
+      span {
+        display: none;
+      }
+      .select, .float-input {
+        display: block;
+      }
+    }
+  }
+}
+
+.cabinet__form {
+  .reset-password {
+    display: none;
+  }
+
+  &--password-edit {
+    .reset-password {
+      display: flex;
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+  .cabinet__link {
+    padding: 15px;
+  }
+  .cabinet__form {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px){
+  .cabinet__orders {
+    margin-top: 30px;
+  }
+
+  .orders-table {
+    border: 0;
+  }
+  .orders-table > thead {
+    display: none;
+  }
+  .orders-table > tbody > tr {
+    display: block;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #d3d3d3;
+    }
+  }
+  .orders-table > tbody > tr + tr {
+    margin-top: 20px;
+    white-space: nowrap;
+  }
+  .orders-table > tbody > tr > td {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    width: 100%;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(5) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      &:before {
+        width: 50%;
+        margin: 0 0 0 -10px;
+        white-space: normal;
+      }
+    }
+  }
+  .orders-table > tbody > tr > td:before {
+    content: attr(data-thead);
+    display: inline-block;
+    margin: 0 -10px;
+    width: 100%;
+  }
+
+  .orders-table > tbody > tr > td:last-child {
+    flex-direction: row;
+    justify-content: flex-end;
+    border-bottom: none;
+  }
+
+  .orders-table > tbody > tr > td:nth-child(3),
+  .orders-table > tbody > tr > td:nth-child(4) {
+    display: none;
+  }
+
+  .orders-table__actions {
+    width: 24px;
+    height: 24px;
+  }
+
+  .orders-table__actions svg {
+    width: 24px;
+    height: auto;
+  }
+}
+
+@media screen and(max-width: 550px) {
+  .cabinet__form .form__row--triple {
+    flex-direction: column;
+
+    .float-input {
+      width: 100%;
+      
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .cabinet__actions {
+    flex-direction: column;
+
+    .btn + .btn {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+}
